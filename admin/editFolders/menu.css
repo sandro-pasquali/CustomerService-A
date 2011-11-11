@@ -1,0 +1,90 @@
+
+.container
+  {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+.rootElement 
+  {
+	  /* optional */
+	  font-family: Verdana, Arial;
+		font-size: 10px;
+		font-weight: bold;
+	  cursor: default;
+  }
+
+.subElement 
+  {
+	  /* obligatory */
+	  position: absolute;
+	  visibility: hidden;
+		
+	  /* optional */
+	  padding-left: 11px;
+	  padding-top: 2px;
+	  background-image: url(images/verticalBars.gif);
+	  background-repeat: repeat-y;
+  }
+  
+.subElementLabel
+  {
+	  cursor: hand;
+	  cursor: pointer;
+  }
+	
+.element 
+  {
+	  /* obligatory */
+	  position: absolute;
+	  visibility: hidden;
+		
+	  /* optional */
+	  color: #000000;
+	  padding-left: 11px;
+	  padding-top: 2px;
+	  background-image: url(images/branchedLinkage.gif);
+	  background-repeat: no-repeat;
+  }
+  
+.terminalElement
+  {
+	  /* obligatory */
+	  position: absolute;
+	  visibility: hidden;
+		
+	  /* optional */
+	  color: #000000;
+	  padding-left: 11px;
+	  padding-top: 2px;
+	  background-image: url(images/terminalLinkage.gif);
+	  background-repeat: no-repeat;
+  }
+
+.element a 
+  {
+	  text-decoration: none;
+	  color: #000000;
+  }
+	
+.element a:hover 
+  {
+	  color: #0000ff;
+  }
+  
+.iconControlOpen
+  {
+    padding-right: 2px;
+  }
+  
+.iconControlClosed
+  {
+    padding-right: 2px;
+  }
+  
+.icon
+  {
+    width: 12px;
+    height: 12px;
+  }

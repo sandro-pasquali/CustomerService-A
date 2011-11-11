@@ -1,0 +1,35 @@
+<html><head><title></title>
+
+<script language="Javascript" type="text/javascript">
+
+var composeWindow = null;
+
+function showComposeWindow()
+  {
+    try
+      {
+        composeWindow.close();
+      }
+    catch(e) {}
+    
+    composeWindow = window.open('../composeMessage/compose.php','composeWindow','width=600,height=500,top=20,left=20,screenX=20,screenY=20');
+    composeWindow.opener = self;
+  }
+
+</script>
+</head>
+
+<FRAMESET ROWS="50,*">
+  <FRAME NAME="Controls" SRC="controls/controls.php" TITLE="Controls" frameborder="0" border="0" marginheight="0" marginwidth="0" scrolling="no" noresize="noresize">
+  <FRAMESET COLS="10%,*">
+    <FRAME NAME="Menu" SRC="menu/menu.html" TITLE="Menu" marginheight="0" marginwidth="0">
+    <FRAMESET ROWS="50%,*">
+      <FRAME NAME="MessageBrowser" SRC="messageBrowser/messageBrowser.php" TITLE="MessageBrowser" marginheight="0" marginwidth="0">
+      <FRAME NAME="MessageDisplay" SRC="aboutBlank" TITLE="MessageDisplay" marginheight="0" marginwidth="0">
+    </FRAMESET>
+  </FRAMESET>
+</FRAMESET>
+
+
+
+</html>

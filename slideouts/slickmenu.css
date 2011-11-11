@@ -1,0 +1,37 @@
+table.slickmenu td {
+}
+
+table.slickmenu a {
+  color: black;
+  text-decoration: none;
+  width: 70px;
+  display: block;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: bold;
+  height: 13px;
+}
+
+table.slickmenu a:hover {
+  background-color: #9d9d9d;
+  color: white;
+  text-decoration: none;
+}
+
+div.submenus a {
+  color: black;
+  background-color: #bdbdbd;
+  text-decoration: none;
+  width: 171px;
+  display: block;
+  padding: 4px 5px;
+  font-size: 9px;
+  font-weight: bold;
+  height: 13px;
+}
+
+div.submenus a:hover {
+  background-color: #9d9d9d;
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>Untitled</title>
+    <script type="text/javascript" src="Sarissa_0-9b3.js">
+    </script>
+    <script type="text/javascript">
+    <!--
+function testXpath()
+{
+var domdoc = new Object();
+        try // moz
+	        {
+	          domdoc.httpHandle = new XMLHttpRequest();
+			      domdoc.httpHandle.overrideMimeType("text/xml");
+	          domdoc.xmlHandle = new DOMParser(); 
+	        }
+	      catch(e) // ie
+	        {
+            try 
+		          {
+                domdoc.httpHandle = new ActiveXObject("Msxml2.XMLHTTP.4.0");
+                domdoc.xmlHandle = new ActiveXObject("Msxml2.DOMDocument.4.0");
+			        }
+            catch(e) {}
+          }
+
+    var xmlDoc = domdoc.xmlHandle;
+    var objNodeList;
+    var xmlStr = "<?xml version='1.0' encoding='UTF-8'?>"+
+        "<xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>"+
+        "<xsl:output method='xml' version='1.0' encoding='UTF-8' indent='yes'/>"+
+        "<xsl:template match='*'></xsl:template><xsl:template match='@*'>"+
+        "</xsl:template></xsl:stylesheet>";
+    xmlDoc.loadXML(xmlStr);
+	
+    // the following two lines are needed for IE
+    xmlDoc.setProperty("SelectionNamespaces", "xmlns:xsl='http://www.w3.org/1999/XSL/Transform'");
+    xmlDoc.setProperty("SelectionLanguage", "XPath");
+	
+    testSelectNodesOn(xmlDoc, "//xsl:template");
+    testSelectNodesOn(xmlDoc.documentElement, "//xsl:template");
+    testSelectNodesOn((xmlDoc.documentElement.getElementsByTagName("*"))[0], "//xsl:template");
+}
+function testSelectNodesOn(domNode, sXpath)
+{
+    alert("testing selectNodes("+sXpath+") on a "+domNode);
+    var objNodeList = domNode.selectNodes(sXpath);
+    for(i=0;i<objNodeList.length;i++)
+        alert(objNodeList[i].xml);
+    alert("testing selectSingleNode("+sXpath+") on a "+domNode);
+    var oElem = domNode.selectSingleNode(sXpath);
+    alert(oElem+"\n"+oElem.xml);
+}
+    //-->
+    </script>
+</head>
+
+<body>
+<button onclick="testXpath()">test xpath</button>
+</body>
+</html>
+		
