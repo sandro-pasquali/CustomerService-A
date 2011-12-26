@@ -33,13 +33,13 @@ function init()
 		
 		System.start();
     
- var S = System.XMLHTTP.build('REST','http://www.datecam.com/services/testSerialize.php','GET');
+ var S = System.XMLHTTP.build('REST','http://path/to/services/testSerialize.php','GET');
 S.setCallback(testing2);
 S.call();   
     
     // as SOAP
 
-    var S = System.XMLHTTP.build('SOAP','http://web3.datecam.com/services/worldLocator.php');
+    var S = System.XMLHTTP.build('SOAP','http://path/to/services/worldLocator.php');
     S.setMethod('getLatLon');
     S.Parameters.add('cityName','toronto');
     S.Parameters.add('countryCode','ca');

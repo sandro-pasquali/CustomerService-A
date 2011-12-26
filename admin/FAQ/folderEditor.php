@@ -157,16 +157,10 @@ function confirmSubmit()
     	Site Skin:
   		<span class="formElementInput">
 			<select name="siteSkin">
-        <option value="default" selected>DateCam</option>
-        <option value="cupid">CupidCams</option>
-        <option value="ggwild">GirlsGoneWild</option>
-        <option value="ratecam">RateCam</option>
-        <option value="adultac">AdultActionCam</option>
-        <option value="shempcam">ShempCam</option>
-        <option value="sexycamfinder">SexyCamFinder</option>
-        <option value="gcruise">GCruise</option>
-        <option value="flirtingcams">Flirtingcams</option>
-        <option value="coedactioncam">coedactioncam</option>
+        <option value="default" selected>Default</option>
+        <option value="one">One</option>
+        <option value="two">Two</option>
+        <option value="three">Three</option>
 			</select>
   		</span>
 	</label>

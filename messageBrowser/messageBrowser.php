@@ -8,8 +8,11 @@
 	<script src="ActiveWidgets/runtime/lib/grid.js"></script>
 
 	<!-- grid format -->
+
 	<style>
+
 		.active-controls-grid {height: 100%; font: menu;}
+
 		.active-column-0 {width: 40px;}
 		.active-column-1 {width: 46px;}
 		.active-column-2 
@@ -18,15 +21,20 @@
 		  	cursor:pointer; 
 		  	cursor:hand;
 		  }
+
 		.active-column-3 
 		  {
 		  	width: 100px; 
 		  	cursor:pointer; 
 		  	cursor:hand;
 		  }
+
 		.active-column-4 {width: 300px;}
+
 		.active-column-5 {width: 150px;}
+
 		.active-box-image {height: 16px;} /* for firefox 0.8 */
+
 	</style>
 </head>
 <body>
@@ -60,7 +68,7 @@
 				<priority>*</priority>
 				<flagged> </flagged>
 				<skin>adultac</skin>
-				<from>nataxia</from>
+				<from>johnson</from>
 				<subject>Yeah, god bless america (sic)</subject>
 				<received>8/20/2004 4:04 P.M.</received>
 			</message>
@@ -105,6 +113,7 @@
   obj.setRowHeaderWidth("0px");
   
 	//	set the second column template to image+text
+
 	obj.setColumnTemplate(new Active.Templates.Image, 1);
 
 	//	provide column labels
@@ -115,8 +124,11 @@
 	
   obj.setAction("click", function(src)
     {
+
       var rowIndex = src.getProperty("item/index");
+
       var columnIndex = src.getColumnProperty("index");
+
       switch(columnIndex) 
         {
           case 2:
@@ -130,7 +142,9 @@
           default:
             //window.open(this.getDataProperty("text", rowIndex, columnIndex),"blah");
           break;
+
         } ;
+
     }); 
 
 	//	write grid html to the page
